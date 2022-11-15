@@ -1,0 +1,15 @@
+<div class="modal-body">
+  <h1>Show Pet Module</h1>
+  <h2><%= @pet.name %></h2>
+  <h3>$<%= @pet.price %> / day</h3>
+  <h3><%= @pet.description %></h3>
+  </div>
+  <div class="modal-footer">
+    <%= simple_form_for [@pet, @booking] do |f| %>
+      <%= f.input :date_start %>
+      <%= f.input :date_end %>
+      <%= f.submit, data: {action: "click->bs-modal#submitEnd"}%>
+    <% end %>
+</div>  
+  
+  
